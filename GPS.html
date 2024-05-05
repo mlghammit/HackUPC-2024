@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Longitude</p>
+    <p id="longitude"></p>
+    <p>Latitude</p>
+    <p id="latitude"></p>
+
+    <script>
+        const longitude = document.getElementById("longitude");
+        const latitude = document.getElementById("latitude");
+        const options = {
+            timeout: 20000,
+            enableHighAccuracy: true,
+            maximumAge: 0
+        }
+
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(showPosition,
+                positionError, options);
+        } else {
+            console.log("Geolocation is not supported by this browser.");
+        }
+
+
+        function showPosition(position) {
+            latitude.innerHTML = position.coords.latitude;
+            longitude.innerHTML = position.coords.longitude;
+            console.log(latitude,longitude);
+        }
+
+        function positionError(error){
+            console.log(error);
+            console.log("Sum Ting Wong, Wi Tu Lo, Bang Ding Ow")
+        }
+    </script>
+</body>
+</html>
