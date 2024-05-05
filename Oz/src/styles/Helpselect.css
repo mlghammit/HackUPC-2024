@@ -1,0 +1,31 @@
+body{
+    background-color: #F2F2F2;
+    text-align: center;
+}
+.helpSelect{
+    text-align: center;
+    left: 40%;
+}
+.extras{
+    margin-top: 10px;
+}
+#letsGo{
+    display: none;
+    padding-top: 10px;
+}
+#letsGo button{
+    font-size: 14px;
+    padding: 10px;
+    background-color: #FDB614;
+    color: white;
+    border: 2px solid #FDB614;
+    border-radius: 7px;
+}
+#letsGo button:hover{
+    background-color: orange;
+}
+@media (max-width: 800px) {
+    .helpSelect {
+        left: 30%;
+    }
+}

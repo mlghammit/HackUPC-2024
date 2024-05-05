@@ -1,0 +1,41 @@
+body{
+    background-color: #F2F2F2;
+}
+
+.splash h1{
+    font-size: 5em;
+    margin-bottom: 5px;
+}
+.splash img{
+    width: 20%;
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+}
+.splash p{
+    animation: fadein ;
+    opacity: 0;
+    animation: fadeIn 5s ease-in-out forwards, moveDown 5s ease-in-out forwards; ;
+    transform: translateY(-20px);
+}
+
+
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes moveDown {
+    from{transform:translateY(-20px);}
+    to{transform:translateY(0px);}
+}
+
+
+@media (max-width: 550px) {
+    .splash img {
+        width: 50%;
+    }
+}
+@media (min-width: 1000px) {
+    .splash {
+        left: 10%;
+    }
+}
